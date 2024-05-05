@@ -8,6 +8,9 @@ var endpoint = process.env.endpoint || "http://localhost:5000"
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    __APP_ENV__: endpoint,
+  },
   plugins: [react()],
   server: {
     proxy: {
